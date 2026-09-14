@@ -1,0 +1,129 @@
+{
+  "schema": "linux.admin.defender.sacred-files.v1",
+  "title": "Protected Directories by Linux Distribution",
+  "purpose": "Defensive inventory describing operating-system directories and interfaces that should receive elevated administrative control, integrity monitoring, careful change management, backup, and appropriate access restrictions.",
+  "source_inventory": "linux-systems.json",
+  "qualification": "These are defensive baseline classifications, not assertions that every path is immutable. Exact paths, ownership, permissions, mount points, service managers, and security mechanisms vary by distribution, release, installation, and filesystem layout.",
+  "control_principles": [
+    "Require appropriate administrative authorization for changes to operating-system resources.",
+    "Prefer distribution package managers and signed packages for system software changes.",
+    "Use filesystem permissions, Linux Security Modules, auditing, backups, and integrity monitoring where appropriate.",
+    "Treat kernel interfaces and device namespaces as live system interfaces rather than ordinary files.",
+    "Do not disable security controls merely to modify protected system resources."
+  ],
+  "common_protected_directories": [
+    { "path": "/", "role": "Filesystem root and operating-system namespace." },
+    { "path": "/boot", "role": "Bootloader, kernel, initramfs, and boot assets where used." },
+    { "path": "/etc", "role": "System-wide configuration and service configuration." },
+    { "path": "/usr", "role": "Installed operating-system programs, libraries, documentation, and shared resources." },
+    { "path": "/usr/bin", "role": "Common executable programs." },
+    { "path": "/usr/sbin", "role": "System-administration executables." },
+    { "path": "/usr/lib", "role": "Shared libraries and supporting operating-system data." },
+    { "path": "/var", "role": "Variable system data, package state, service state, caches, queues, and logs." },
+    { "path": "/var/log", "role": "System and application logs used for operations and auditing." },
+    { "path": "/var/lib", "role": "Persistent service, package, database, and application state." },
+    { "path": "/var/spool", "role": "Queued work such as mail, print, and scheduled jobs where used." },
+    { "path": "/home", "role": "User home directories and user application state." },
+    { "path": "/root", "role": "Root administrator home directory." },
+    { "path": "/run", "role": "Volatile runtime state and service coordination." },
+    { "path": "/sys", "role": "Kernel sysfs interface to devices, drivers, and kernel subsystems." },
+    { "path": "/proc", "role": "Kernel process and system information interface." },
+    { "path": "/dev", "role": "Dynamic device-node and kernel device interface hierarchy." },
+    { "path": "/tmp", "role": "System temporary-file namespace." },
+    { "path": "/var/tmp", "role": "Persistent temporary-file namespace." }
+  ],
+  "distributions": [
+    {
+      "distribution": "Ubuntu",
+      "base_system": "Debian",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "4.10", "codename": "Warty Warthog", "status": "End of Life", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "14.04 LTS", "codename": "Trusty Tahr", "status": "End of Life", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "16.04 LTS", "codename": "Xenial Xerus", "status": "End of Life", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "18.04 LTS", "codename": "Bionic Beaver", "status": "End of Life", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "20.04 LTS", "codename": "Focal Fossa", "status": "Extended Security Maintenance", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "22.04 LTS", "codename": "Jammy Jellyfish", "status": "Supported", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "24.04 LTS", "codename": "Noble Numbat", "status": "Supported", "protected_directory_profile": "ubuntu-baseline" },
+        { "version": "26.04 LTS", "codename": "Plucky Puffin", "status": "Supported", "protected_directory_profile": "ubuntu-baseline" }
+      ]
+    },
+    {
+      "distribution": "Debian",
+      "base_system": "Independent",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "1.1", "codename": "Buzz", "status": "End of Life", "protected_directory_profile": "debian-baseline" },
+        { "version": "9", "codename": "Stretch", "status": "End of Life", "protected_directory_profile": "debian-baseline" },
+        { "version": "10", "codename": "Buster", "status": "End of Life", "protected_directory_profile": "debian-baseline" },
+        { "version": "11", "codename": "Bullseye", "status": "Security Support", "protected_directory_profile": "debian-baseline" },
+        { "version": "12", "codename": "Bookworm", "status": "Supported", "protected_directory_profile": "debian-baseline" },
+        { "version": "13", "codename": "Trixie", "status": "Supported", "protected_directory_profile": "debian-baseline" },
+        { "version": "14", "codename": "Forky", "status": "Testing / Upcoming", "protected_directory_profile": "debian-baseline" }
+      ]
+    },
+    {
+      "distribution": "Red Hat Enterprise Linux (RHEL)",
+      "base_system": "Fedora",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "2.1 AS", "codename": "Pensacola", "status": "End of Life", "protected_directory_profile": "rhel-baseline" },
+        { "version": "7.0", "codename": "Maipo", "status": "End of Life", "protected_directory_profile": "rhel-baseline" },
+        { "version": "8.0", "codename": "Ootpa", "status": "Maintenance Support", "protected_directory_profile": "rhel-baseline" },
+        { "version": "9.0", "codename": "Plow", "status": "Supported", "protected_directory_profile": "rhel-baseline" },
+        { "version": "10.0", "codename": "Bolkar", "status": "Supported", "protected_directory_profile": "rhel-baseline" }
+      ]
+    },
+    {
+      "distribution": "Fedora",
+      "base_system": "Independent / Red Hat History",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "1", "codename": "Yarrow", "status": "End of Life", "protected_directory_profile": "fedora-baseline" },
+        { "version": "40", "codename": "None", "status": "End of Life", "protected_directory_profile": "fedora-baseline" },
+        { "version": "41", "codename": "None", "status": "Supported", "protected_directory_profile": "fedora-baseline" },
+        { "version": "42", "codename": "None", "status": "Supported", "protected_directory_profile": "fedora-baseline" },
+        { "version": "43", "codename": "None", "status": "Supported", "protected_directory_profile": "fedora-baseline" },
+        { "version": "44", "codename": "None", "status": "Supported", "protected_directory_profile": "fedora-baseline" }
+      ]
+    },
+    {
+      "distribution": "Arch Linux",
+      "base_system": "Independent",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "Rolling Release", "codename": "Dynamic", "status": "Continuously Updated", "protected_directory_profile": "arch-linux-baseline" }
+      ]
+    },
+    {
+      "distribution": "Linux Mint",
+      "base_system": "Ubuntu / Debian",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "1.0", "codename": "Ada", "status": "End of Life", "protected_directory_profile": "linux-mint-baseline" },
+        { "version": "20", "codename": "Ulyana", "status": "End of Life", "protected_directory_profile": "linux-mint-baseline" },
+        { "version": "21", "codename": "Vanessa", "status": "Supported", "protected_directory_profile": "linux-mint-baseline" },
+        { "version": "22", "codename": "Wilma", "status": "Supported", "protected_directory_profile": "linux-mint-baseline" }
+      ]
+    },
+    {
+      "distribution": "openSUSE",
+      "base_system": "SUSE Linux",
+      "protected_directories": ["/", "/boot", "/etc", "/usr", "/usr/bin", "/usr/sbin", "/usr/lib", "/usr/libexec", "/var", "/var/log", "/var/lib", "/var/spool", "/home", "/root", "/run", "/sys", "/proc", "/dev", "/tmp", "/var/tmp"],
+      "version_documentation": [
+        { "version": "15.5 (Leap)", "codename": "Regular Release", "status": "End of Life", "protected_directory_profile": "opensuse-baseline" },
+        { "version": "15.6 (Leap)", "codename": "Regular Release", "status": "Supported", "protected_directory_profile": "opensuse-baseline" },
+        { "version": "Tumbleweed", "codename": "Rolling Release", "status": "Continuously Updated", "protected_directory_profile": "opensuse-baseline" }
+      ]
+    }
+  ],
+  "profile_definitions": {
+    "ubuntu-baseline": "Debian-family Linux filesystem protection baseline as applied to Ubuntu installations.",
+    "debian-baseline": "Debian filesystem protection baseline, with release-specific paths subject to installation layout.",
+    "rhel-baseline": "Enterprise Red Hat filesystem protection baseline, including SELinux-sensitive system resources where applicable.",
+    "fedora-baseline": "Fedora filesystem protection baseline, including SELinux-sensitive system resources where applicable.",
+    "arch-linux-baseline": "Arch Linux rolling-release filesystem protection baseline; exact installed paths depend on packages and local configuration.",
+    "linux-mint-baseline": "Ubuntu/Debian-derived Linux Mint filesystem protection baseline.",
+    "opensuse-baseline": "SUSE/openSUSE filesystem protection baseline for Leap and Tumbleweed installations."
+  }
+}
