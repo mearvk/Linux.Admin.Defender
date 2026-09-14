@@ -1,0 +1,87 @@
+{
+  "linux_distributions": [
+    {
+      "distribution": "Ubuntu",
+      "base_system": "Debian",
+      "developer": "Canonical Ltd.",
+      "versions": [
+        { "version": "4.10", "codename": "Warty Warthog", "release_year": 2004, "status": "End of Life" },
+        { "version": "14.04 LTS", "codename": "Trusty Tahr", "release_year": 2014, "status": "End of Life" },
+        { "version": "16.04 LTS", "codename": "Xenial Xerus", "release_year": 2016, "status": "End of Life" },
+        { "version": "18.04 LTS", "codename": "Bionic Beaver", "release_year": 2018, "status": "End of Life" },
+        { "version": "20.04 LTS", "codename": "Focal Fossa", "release_year": 2020, "status": "Extended Security Maintenance" },
+        { "version": "22.04 LTS", "codename": "Jammy Jellyfish", "release_year": 2022, "status": "Supported" },
+        { "version": "24.04 LTS", "codename": "Noble Numbat", "release_year": 2024, "status": "Supported" },
+        { "version": "26.04 LTS", "codename": "Plucky Puffin", "release_year": 2026, "status": "Supported" }
+      ]
+    },
+    {
+      "distribution": "Debian",
+      "base_system": "Independent",
+      "developer": "Debian Project",
+      "versions": [
+        { "version": "1.1", "codename": "Buzz", "release_year": 1996, "status": "End of Life" },
+        { "version": "9", "codename": "Stretch", "release_year": 2017, "status": "End of Life" },
+        { "version": "10", "codename": "Buster", "release_year": 2019, "status": "End of Life" },
+        { "version": "11", "codename": "Bullseye", "release_year": 2021, "status": "Security Support" },
+        { "version": "12", "codename": "Bookworm", "release_year": 2023, "status": "Supported" },
+        { "version": "13", "codename": "Trixie", "release_year": 2025, "status": "Supported" },
+        { "version": "14", "codename": "Forky", "release_year": 2026, "status": "Testing / Upcoming" }
+      ]
+    },
+    {
+      "distribution": "Red Hat Enterprise Linux (RHEL)",
+      "base_system": "Fedora",
+      "developer": "Red Hat (IBM)",
+      "versions": [
+        { "version": "2.1 AS", "codename": "Pensacola", "release_year": 2002, "status": "End of Life" },
+        { "version": "7.0", "codename": "Maipo", "release_year": 2014, "status": "End of Life" },
+        { "version": "8.0", "codename": "Ootpa", "release_year": 2019, "status": "Maintenance Support" },
+        { "version": "9.0", "codename": "Plow", "release_year": 2022, "status": "Supported" },
+        { "version": "10.0", "codename": "Bolkar", "release_year": 2025, "status": "Supported" }
+      ]
+    },
+    {
+      "distribution": "Fedora",
+      "base_system": "Independent / Red Hat History",
+      "developer": "Fedora Project (Sponsored by Red Hat)",
+      "versions": [
+        { "version": "1", "codename": "Yarrow", "release_year": 2003, "status": "End of Life" },
+        { "version": "40", "codename": "None", "release_year": 2024, "status": "End of Life" },
+        { "version": "41", "codename": "None", "release_year": 2024, "status": "Supported" },
+        { "version": "42", "codename": "None", "release_year": 2025, "status": "Supported" },
+        { "version": "43", "codename": "None", "release_year": 2025, "status": "Supported" },
+        { "version": "44", "codename": "None", "release_year": 2026, "status": "Supported" }
+      ]
+    },
+    {
+      "distribution": "Arch Linux",
+      "base_system": "Independent",
+      "developer": "Arch Linux Team",
+      "versions": [
+        { "version": "Rolling Release", "codename": "Dynamic", "release_year": 2002, "status": "Continuously Updated" }
+      ]
+    },
+    {
+      "distribution": "Linux Mint",
+      "base_system": "Ubuntu / Debian",
+      "developer": "Linux Mint Team",
+      "versions": [
+        { "version": "1.0", "codename": "Ada", "release_year": 2006, "status": "End of Life" },
+        { "version": "20", "codename": "Ulyana", "release_year": 2020, "status": "End of Life" },
+        { "version": "21", "codename": "Vanessa", "release_year": 2022, "status": "Supported" },
+        { "version": "22", "codename": "Wilma", "release_year": 2024, "status": "Supported" }
+      ]
+    },
+    {
+      "distribution": "openSUSE",
+      "base_system": "SUSE Linux",
+      "developer": "SUSE / openSUSE Project",
+      "versions": [
+        { "version": "15.5 (Leap)", "codename": "Regular Release", "release_year": 2023, "status": "End of Life" },
+        { "version": "15.6 (Leap)", "codename": "Regular Release", "release_year": 2024, "status": "Supported" },
+        { "version": "Tumbleweed", "codename": "Rolling Release", "release_year": 2006, "status": "Continuously Updated" }
+      ]
+    }
+  ]
+}
