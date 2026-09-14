@@ -17,6 +17,16 @@ The project follows a distribution-aware model. Linux is a family of operating s
 - `digital/lists/linux-distributions/fedora/README.md` — Fedora baseline.
 - `digital/lists/linux-distributions/arch/README.md` — Arch Linux baseline.
 
+## Kernel File Protection
+
+- `kernel/file-locker/linux_admin_defender_lock.c` — reference kernel module for applying an inode immutable protection to one administrator-selected path.
+- `kernel/file-locker/Makefile` — external-module build rules against the running kernel.
+- `kernel/file-locker/control.sh` — root-controlled load, unload, status, and explicit unlock commands.
+- `kernel/file-locker/README.md` — build, operation, security, and filesystem compatibility notes.
+- `kernel/file-locker/VERSION_MATRIX.md` — Debian, Ubuntu, Fedora, Arch, enterprise-family, and kernel compatibility guidance.
+
+The kernel module is deliberately narrow: it does not intercept arbitrary processes or disable platform security controls. For production deployments, use signed modules and the distribution's supported kernel/module mechanism.
+
 ## Administrative Principle
 
 The objective is controlled change, integrity, least privilege, auditing, and recoverability. System protection must not prevent legitimate package updates, kernel updates, service operation, or authorized administration.
