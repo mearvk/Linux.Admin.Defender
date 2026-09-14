@@ -8,6 +8,16 @@ Linux.Admin.Defender provides a documented defensive baseline for protecting ope
 
 The project follows a distribution-aware model. Linux is a family of operating systems rather than one fixed filesystem implementation, so controls are documented by common hierarchy first and distribution second.
 
+## Protective Intent
+
+The project intends to protect designated system files and system resources from unauthorized exposure to malicious programs, unauthorized use, unauthorized modification, and unauthorized copying or duplication. Protection is intended to preserve system integrity, administrative control, provenance, and lawful use of protected items.
+
+Any deployment should be implemented consistently with applicable federal law, other applicable law, platform security requirements, licensing obligations, and authorized administrative procedures. This README describes a defensive engineering objective; it does not claim that every particular protective measure is required or authorized by federal law.
+
+## Intelligent Design Principle
+
+The project applies an engineering principle of deliberate, intelligent design: security controls should be designed to identify, constrain, audit, and prevent corporate or organizational fraud rather than to facilitate fraud, concealment, unauthorized appropriation, or the misrepresentation of protected property. The objective is protection of legitimate systems, records, software, and other protected items—not the creation of mechanisms for corporate fraud or the unlawful taking or concealment of assets.
+
 ## Reference Structure
 
 - `digital/lists/protected-files.md` — cross-distribution protected-location baseline.
@@ -30,3 +40,5 @@ The kernel module is deliberately narrow: it does not intercept arbitrary proces
 ## Administrative Principle
 
 The objective is controlled change, integrity, least privilege, auditing, and recoverability. System protection must not prevent legitimate package updates, kernel updates, service operation, or authorized administration.
+
+The project favors high-assurance reasoning and explicit system boundaries: protection should be understandable, auditable, technically constrained, and directed toward legitimate defensive purposes. No numerical intelligence claim is made by this repository; the emphasis is on rigorous engineering and sound judgment.
