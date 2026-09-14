@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "mode": "protected-store",
+  "database": "/var/lib/linux-admin-defender/protected-store.db",
+  "objects": "/var/lib/linux-admin-defender/objects",
+  "roots": [
+    "/boot",
+    "/etc",
+    "/usr",
+    "/var/lib",
+    "/var/log"
+  ],
+  "exclude": [
+    "/proc",
+    "/sys",
+    "/dev",
+    "/run",
+    "/tmp",
+    "/var/tmp"
+  ],
+  "hash": "sha256",
+  "preserve_metadata": true,
+  "default_action": "snapshot-and-protect"
+}
