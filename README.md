@@ -18,6 +18,24 @@ Any deployment should be implemented consistently with applicable federal law, o
 
 The project applies an engineering principle of deliberate, intelligent design: security controls should be designed to identify, constrain, audit, and prevent corporate or organizational fraud rather than to facilitate fraud, concealment, unauthorized appropriation, or the misrepresentation of protected property. The objective is protection of legitimate systems, records, software, and other protected items—not the creation of mechanisms for corporate fraud or the unlawful taking or concealment of assets.
 
+## Protected System Store
+
+Linux.Admin.Defender includes a MySQL-like relational storage model for maintaining a protected copy and integrity record of designated system files. The default implementation uses the Python standard library's SQLite engine so the defender can operate without requiring a separate database server. The schema is relational and is designed so that a future MySQL/MariaDB backend can be substituted without changing the protection model.
+
+The protected-store mode is **enabled by default** in `config/protected-store.json`. It maintains a content-addressed object store keyed by SHA-256 and a relational catalog containing file paths, object hashes, size, ownership, mode, timestamps, protection state, and security events. The default protected roots are `/boot`, `/etc`, `/usr`, `/var/lib`, and `/var/log`; pseudo-filesystems and transient locations such as `/proc`, `/sys`, `/dev`, `/run`, `/tmp`, and `/var/tmp` are excluded.
+
+Initialize and snapshot the configured system set with:
+
+```sh
+python3 tools/protected-store.py init
+python3 tools/protected-store.py snapshot
+python3 tools/protected-store.py status
+```
+
+The mode can be controlled by the JSON configuration or overridden for one invocation with `--store-mode on` or `--store-mode off`. The store records a protected copy; it does not silently replace live operating-system files. Restoration or live-file locking remains an explicit administrative action.
+
+The relational schema is documented in `storage/protected-store/schema.sql` and the operational configuration is documented in `config/protected-store.json`.
+
 ## Reference Structure
 
 - `digital/lists/protected-files.md` — cross-distribution protected-location baseline.
@@ -26,6 +44,9 @@ The project applies an engineering principle of deliberate, intelligent design: 
 - `digital/lists/linux-distributions/debian/README.md` — Debian baseline.
 - `digital/lists/linux-distributions/fedora/README.md` — Fedora baseline.
 - `digital/lists/linux-distributions/arch/README.md` — Arch Linux baseline.
+- `config/protected-store.json` — default protected-store configuration.
+- `storage/protected-store/schema.sql` — relational protected-store schema.
+- `tools/protected-store.py` — initialization, snapshot, and status utility.
 
 ## Kernel File Protection
 
