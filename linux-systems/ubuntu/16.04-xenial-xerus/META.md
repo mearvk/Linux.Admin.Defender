@@ -1,10 +1,6 @@
-# Ubuntu 16.04 LTS — Xenial Xerus
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Ubuntu
-- Version: 16.04 LTS
-- Codename: Xenial Xerus
-- Release year: 2016
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
 
-This directory represents Ubuntu 16.04 LTS in the Linux Systems inventory.
+Source inventory: `linux-systems.json`

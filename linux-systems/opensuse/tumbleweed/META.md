@@ -1,8 +1,6 @@
-# openSUSE Tumbleweed
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: openSUSE
-- Version: Tumbleweed
-- Codename: Rolling Release
-- Release year: 2006
-- Source: `linux-systems.json`
-- Inventory status: Continuously Updated
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

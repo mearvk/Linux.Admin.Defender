@@ -1,8 +1,6 @@
-# Debian 10 — Buster
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 10
-- Codename: Buster
-- Release year: 2019
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

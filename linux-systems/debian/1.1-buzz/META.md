@@ -1,8 +1,6 @@
-# Debian 1.1 — Buzz
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 1.1
-- Codename: Buzz
-- Release year: 1996
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

@@ -1,8 +1,6 @@
-# Debian 13 — Trixie
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 13
-- Codename: Trixie
-- Release year: 2025
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

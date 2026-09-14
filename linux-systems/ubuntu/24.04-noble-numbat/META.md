@@ -1,8 +1,6 @@
-# Ubuntu 24.04 LTS — Noble Numbat
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Ubuntu
-- Version: 24.04 LTS
-- Codename: Noble Numbat
-- Release year: 2024
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

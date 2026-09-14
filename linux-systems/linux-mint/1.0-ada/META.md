@@ -1,8 +1,6 @@
-# Linux Mint 1.0 — Ada
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Linux Mint
-- Version: 1.0
-- Codename: Ada
-- Release year: 2006
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

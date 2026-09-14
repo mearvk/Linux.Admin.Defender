@@ -1,10 +1,6 @@
-# Ubuntu 26.04 LTS — Plucky Puffin
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Ubuntu
-- Version: 26.04 LTS
-- Codename: Plucky Puffin (as recorded in `linux-systems.json`)
-- Release year: 2026
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
 
-The directory name intentionally mirrors the current inventory document. The source JSON should be treated as authoritative for this folder structure until its metadata is corrected.
+Source inventory: `linux-systems.json`

@@ -1,8 +1,6 @@
-# Fedora 42
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Fedora
-- Version: 42
-- Codename: None
-- Release year: 2025
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

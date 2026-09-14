@@ -1,8 +1,6 @@
-# Debian 9 — Stretch
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 9
-- Codename: Stretch
-- Release year: 2017
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

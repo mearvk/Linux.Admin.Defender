@@ -1,8 +1,6 @@
-# Debian 12 — Bookworm
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 12
-- Codename: Bookworm
-- Release year: 2023
-- Source: `linux-systems.json`
-- Inventory status: Supported (as recorded in source inventory)
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

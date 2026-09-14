@@ -1,8 +1,6 @@
-# Arch Linux — Rolling Release
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Arch Linux
-- Version: Rolling Release
-- Codename: Dynamic
-- Release year: 2002
-- Source: `linux-systems.json`
-- Inventory status: Continuously Updated
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

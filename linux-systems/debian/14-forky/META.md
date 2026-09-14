@@ -1,8 +1,6 @@
-# Debian 14 — Forky
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Debian
-- Version: 14
-- Codename: Forky
-- Release year: 2026
-- Source: `linux-systems.json`
-- Inventory status: Testing / Upcoming
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

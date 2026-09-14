@@ -1,8 +1,6 @@
-# RHEL 8.0 — Ootpa
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Red Hat Enterprise Linux (RHEL)
-- Version: 8.0
-- Codename: Ootpa
-- Release year: 2019
-- Source: `linux-systems.json`
-- Inventory status: Maintenance Support
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

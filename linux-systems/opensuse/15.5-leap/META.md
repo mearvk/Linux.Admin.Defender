@@ -1,8 +1,6 @@
-# openSUSE 15.5 (Leap)
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: openSUSE
-- Version: 15.5 (Leap)
-- Codename: Regular Release
-- Release year: 2023
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

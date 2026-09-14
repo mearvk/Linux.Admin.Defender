@@ -1,8 +1,6 @@
-# Fedora 1 — Yarrow
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Fedora
-- Version: 1
-- Codename: Yarrow
-- Release year: 2003
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

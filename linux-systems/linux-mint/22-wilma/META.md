@@ -1,8 +1,6 @@
-# Linux Mint 22 — Wilma
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Linux Mint
-- Version: 22
-- Codename: Wilma
-- Release year: 2024
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

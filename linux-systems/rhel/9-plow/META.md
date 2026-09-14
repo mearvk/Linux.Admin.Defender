@@ -1,8 +1,6 @@
-# RHEL 9.0 — Plow
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Red Hat Enterprise Linux (RHEL)
-- Version: 9.0
-- Codename: Plow
-- Release year: 2022
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

@@ -1,8 +1,6 @@
-# openSUSE 15.6 (Leap)
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: openSUSE
-- Version: 15.6 (Leap)
-- Codename: Regular Release
-- Release year: 2024
-- Source: `linux-systems.json`
-- Inventory status: Supported
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

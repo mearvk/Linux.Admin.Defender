@@ -1,8 +1,6 @@
-# RHEL 7.0 — Maipo
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Red Hat Enterprise Linux (RHEL)
-- Version: 7.0
-- Codename: Maipo
-- Release year: 2014
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

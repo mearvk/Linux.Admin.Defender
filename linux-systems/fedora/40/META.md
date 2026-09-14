@@ -1,8 +1,6 @@
-# Fedora 40
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Fedora
-- Version: 40
-- Codename: None
-- Release year: 2024
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

@@ -1,8 +1,6 @@
-# Linux Mint 20 — Ulyana
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Linux Mint
-- Version: 20
-- Codename: Ulyana
-- Release year: 2020
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`

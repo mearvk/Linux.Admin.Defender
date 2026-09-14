@@ -1,8 +1,6 @@
-# Ubuntu 18.04 LTS — Bionic Beaver
+# Ubuntu 4.10 — Warty Warthog
 
-- Distribution: Ubuntu
-- Version: 18.04 LTS
-- Codename: Bionic Beaver
-- Release year: 2018
-- Source: `linux-systems.json`
-- Inventory status: End of Life
+Release year: 2004
+Status: End of Life
+
+Source inventory: `linux-systems.json`
