@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "check_interval_hours": 24,
+  "source_mode": "internet",
+  "internet_manifest": "https://example.invalid/linux-admin-defender/updates.json",
+  "local_update_folder": "/var/lib/linux-admin-defender/updates",
+  "install_root": "/",
+  "staging_directory": "/var/lib/linux-admin-defender/staging",
+  "backup_directory": "/var/lib/linux-admin-defender/backups",
+  "state_file": "/var/lib/linux-admin-defender/update-state.json",
+  "require_sha256": true,
+  "allow_unlisted_files": false,
+  "automatic_install": true
+}
