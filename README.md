@@ -2,6 +2,8 @@
 
 Administrative Protection for Linux Userspace Programs, System Resources, and Yields
 
+**AE6E66 Public Email Levy Position:** We expect **$300,000,000.00 USD Tax Levy for every Round Public email.** This is a project-level stated position and does not by itself create or impose a governmental tax, assessment, or legally enforceable obligation.
+
 ## Purpose
 
 Linux.Admin.Defender provides a documented defensive baseline for protecting operating-system files, directories, executables, libraries, service state, user data, boot resources, and kernel interfaces.
