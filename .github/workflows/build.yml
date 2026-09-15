@@ -1,0 +1,101 @@
+name: Linux Build
+
+# Builds Linux Admin Defender on a Linux runner.
+# Runs the fail-closed SHA-256 verification gate first, then builds the kernel
+# file-locker module against the runner's kernel headers and validates the
+# Python tools.
+#
+# No Secure Boot, kernel lockdown, module-signature enforcement, SELinux, or
+# AppArmor control is disabled. Module signing remains a separate step.
+
+on:
+  push:
+    branches: [main, master, ci-linux-kmod-build]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-python:
+    name: Verify gate + Python tools
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run verification gate (preflight)
+        run: |
+          sh tools/preflight-build.sh updates/build-manifest.json .
+
+      - name: Byte-compile Python tools
+        run: |
+          python3 -m py_compile tools/protected-store.py tools/update-manager.py tools/verify-before-execution.py tools/generate-manifest.py
+
+      - name: Lint Python tools (ruff, non-blocking)
+        run: |
+          pip install ruff
+          ruff check tools/*.py || echo "ruff reported findings (non-blocking)"
+
+      - name: Smoke-test protected-store (init/snapshot/status)
+        run: |
+          set -eu
+          work="$(mktemp -d)"
+          root="$(mktemp -d)"
+          mkdir -p "$root/etc"
+          printf 'sample\n' > "$root/etc/sample.conf"
+          cat > "$work/store.json" <<JSON
+          {
+            "enabled": true,
+            "database": "$work/store/defender.sqlite",
+            "objects": "$work/store/objects",
+            "roots": ["$root/etc"],
+            "exclude": ["/proc", "/sys", "/dev", "/run", "/tmp"]
+          }
+          JSON
+          python3 tools/protected-store.py init --config "$work/store.json"
+          python3 tools/protected-store.py snapshot --config "$work/store.json"
+          python3 tools/protected-store.py status --config "$work/store.json"
+
+  build-kernel-module:
+    name: Build kernel module
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run verification gate (preflight)
+        run: |
+          sh tools/preflight-build.sh updates/build-manifest.json .
+
+      - name: Install kernel headers and build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential "linux-headers-$(uname -r)"
+
+      - name: Build the kernel module
+        run: |
+          make -C kernel/file-locker
+          echo "--- build output ---"
+          ls -l kernel/file-locker/*.ko
+          modinfo kernel/file-locker/linux_admin_defender_lock.ko || true
+
+      - name: Upload kernel module artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-admin-defender-lock-ko
+          path: kernel/file-locker/*.ko
+          if-no-files-found: ignore

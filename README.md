@@ -58,6 +58,12 @@ The relational schema is documented in `storage/protected-store/schema.sql` and 
 
 The kernel module is deliberately narrow: it does not intercept arbitrary processes or disable platform security controls. For production deployments, use signed modules and the distribution's supported kernel/module mechanism.
 
+## Glossary
+
+Definitions of the Linux kernel-module, Python tooling, build/CI, and
+project-specific terms used throughout this repository are collected in
+[`GLOSSARY.md`](GLOSSARY.md).
+
 ## Administrative Principle
 
 The objective is controlled change, integrity, least privilege, auditing, and recoverability. System protection must not prevent legitimate package updates, kernel updates, service operation, or authorized administration.

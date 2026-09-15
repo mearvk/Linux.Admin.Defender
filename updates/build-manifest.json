@@ -1,0 +1,33 @@
+{
+  "manifest_version": "1.0",
+  "product": "Linux.Admin.Defender",
+  "generated_utc": "2026-09-14T00:00:00Z",
+  "algorithm": "sha256",
+  "description": "Verification manifest for the protected build inputs, consumed by tools/verify-before-execution.py (via tools/preflight-build.sh). Each digest is the SHA-256 of the exact file bytes. Verification fails closed on any mismatch, missing file, unsafe path, or malformed digest. Regenerate with tools/generate-manifest.py when a listed file changes.",
+  "files": [
+    {
+      "path": "kernel/file-locker/linux_admin_defender_lock.c",
+      "sha256": "5f842ffd36ec630821f00447d679bdc7b843aa6b94661ace905cb8ab154772c7"
+    },
+    {
+      "path": "kernel/file-locker/Makefile",
+      "sha256": "c4e64c79ae99b47370ddb92b5d5d4889dfa05d49710b44e9bb5fd0f681255fc8"
+    },
+    {
+      "path": "kernel/file-locker/control.sh",
+      "sha256": "b40a2166034ee987696f52a7a3a61875d479e900d08e6406c4c166074a01786e"
+    },
+    {
+      "path": "tools/protected-store.py",
+      "sha256": "7cef6685b8e451e9b347831f9d59740f5cd27d811374b78c23591468ec3390af"
+    },
+    {
+      "path": "tools/update-manager.py",
+      "sha256": "6aad6bc68f7ae611936e8f93f717dffd1a5c2bdaef3182b5e503c923b9f26ad5"
+    },
+    {
+      "path": "tools/verify-before-execution.py",
+      "sha256": "f6052d7465cbe5481220b00fd586473f9c41e9eab8182354119983e96f146e46"
+    }
+  ]
+}
